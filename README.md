@@ -14,4 +14,7 @@ macOS only.
 MIT
 
 ### Credits
-Thanks to Martin Finke for [`xcall`](https://github.com/martinfinke/xcall), which enables `x-callback-url` communication with Bear.
+
+This project contains the binary distribution of https://github.com/martinfinke/xcall, downloaded from https://github.com/martinfinke/xcall/releases/tag/v1.0.1.
+
+Thanks to Martin Finke for this library, which enables `x-callback-url` communication with Bear.

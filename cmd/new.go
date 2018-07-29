@@ -3,9 +3,9 @@ package cmd
 import (
 	"bufio"
 	"bytes"
-	"fmt"
 	"os"
 
+	"github.com/bjacobel/bear-cli/bear"
 	"github.com/spf13/cobra"
 )
 
@@ -31,7 +31,7 @@ Examples:
 		}
 
 		input := buffer.String()
-		fmt.Println(input)
+		bear.Create(input)
 	},
 }
 
