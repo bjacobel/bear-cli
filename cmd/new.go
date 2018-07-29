@@ -1,7 +1,10 @@
 package cmd
 
 import (
+	"bufio"
+	"bytes"
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -19,7 +22,16 @@ Examples:
 
 `,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("new called")
+		consoleScanner := bufio.NewScanner(os.Stdin)
+		var buffer bytes.Buffer
+
+		for consoleScanner.Scan() {
+			buffer.WriteString(consoleScanner.Text())
+			buffer.WriteString("\n")
+		}
+
+		input := buffer.String()
+		fmt.Println(input)
 	},
 }
 
