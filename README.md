@@ -10,20 +10,6 @@ macOS only.
 ### Usage
 
 
-### Developing
-To build on OSX:
-
-0) Install the XCode CLT
-
-1) Install gcc-8
-
-    brew install gcc
-
-2) Build with these modes
-
-    go build -o bear-cli -buildmode=c-shared -compiler gccgo main.go
-
-
 ### License
 MIT
 

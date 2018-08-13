@@ -5,7 +5,7 @@ import (
 	"bytes"
 	"os"
 
-	"github.com/bjacobel/bear-cli/bear"
+	"github.com/bjacobel/bear-cli/xcall"
 	"github.com/spf13/cobra"
 )
 
@@ -31,7 +31,13 @@ Examples:
 		}
 
 		input := buffer.String()
-		bear.Create(input)
+
+		params := map[string]interface{}{
+			"text":        input,
+			"show_window": "no",
+		}
+
+		xcall.Call("create", params)
 	},
 }
 
